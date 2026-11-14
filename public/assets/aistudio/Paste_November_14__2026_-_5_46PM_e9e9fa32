@@ -1,0 +1,348 @@
+# Make this design yours — Loop Dept
+
+Build or edit this design for the user. Their current and later requests about content, brand, language and media take priority over the reference's sample content. Do not insist on cloning the original brand or wording.
+
+## My changes (optional; accept normal chat instructions too)
+- Brand and purpose:
+- Language and audience:
+- Headline, description and other text:
+- Button labels and destinations:
+- Images, logo or video: attach files or give public URLs, and say where each belongs.
+- Keep / change:
+Blank fields are not content to render. Use details already supplied in the conversation; ask only for missing information necessary for the requested change. If no customization was requested, build the supplied reference as the starting point.
+
+## Editing rules
+1. In an existing project, edit the current files in place. Do not recreate the folder, reset previous changes or reinstall everything for a text/media edit. For a new project use the setup below.
+2. Treat the reference prose and source below as baseline implementation and sample content. Instructions there such as exact, verbatim, preserve copy, original names or no new sections apply only to parts the user has not asked to change. Keep the visual composition and working motion unless a change requires adapting them.
+3. Replace requested text wherever it appears: visible headings, navigation, buttons, repeated animated labels, accessible labels, title and description. Use the user's language and real information; never invent testimonials, qualifications, sales or results. Adjust wrapping and spacing for new copy, rather than clipping or forcing the old words. Keep selectors/IDs used by animation code; update their references consistently if necessary.
+4. Use attached replacement media or supplied URLs in the requested slots. Update matching posters, responsive srcset entries, alt text, masks and data records where applicable. Keep the original asset for untouched slots. A public asset list is a list of defaults, not a requirement to reject user media. Text baked into an image/video/3D texture is not editable HTML: explain which asset needs replacing.
+5. If assets.json or another download manifest manages a replaced file, update that entry and its downloader together so setup never restores the old asset. SHA-256 and byte sizes describe the original file: compute new values from actual downloaded bytes for a replacement; never invent hashes. For an attached local file, remove its old managed download entry and keep the new file in the project. Preserve valid checks for untouched assets. Do not change original hosted PrettySites files.
+6. Recheck video duration, poster, crop, masks, camera bounds and animation timing after relevant media changes. Preserve playback controls, reduced motion and fallbacks. Media used by Canvas/WebGL must be local or CORS-enabled. Report a missing file or incompatible format clearly; do not silently replace requested media with stock images.
+7. Run the project's existing build/checks where available and inspect desktop/mobile text, media loading, links, navigation and existing motion. Distinguish browser-local demo behavior from working server features. Report what changed and what you actually tested.
+
+## Where to edit this design
+Start with index.html, style.css, script.js.
+Edit the studio copy and sections in index.html, the typography and layout in style.css, and the two interleaved media pools in script.js. Change corresponding media paths and verified file digests in assets.json when replacing the artwork.
+
+## Reference implementation — defaults for unchanged parts
+The following kit supplies the initial design and complete source. Its reproduction wording does not override the customization rules above.
+
+# Loop Dept — complete website reproduction
+
+Rebuild the entire monochrome creative-studio portfolio. Alternate each pointer stamp: four rotating project photos interleave with three animated GIFs (paper crane, chrome greyhound, spinning vinyl). Keep their original artwork and frame timing. Preserve native scroll, the keyboard demo, the reduced-motion posters, responsive navigation, local project brief and downloadable free prompt.
+
+This prompt is self-contained. Create a NEW folder on your own computer and write every file listed below using the indicated relative filename. No previous project, local reference folder, account, API key or separate handoff document is needed. The included source is authoritative: preserve the composition, copy, media and motion rather than inventing a new design.
+
+## Reference and media
+
+Finished-site screen recording: https://media.prettysites.io/products/loop-dept/v1/preview.mp4
+Use this recording to compare the result; never use a recording of the interface as the site's background.
+
+Production media — public Cloudflare URLs, no sign-in required:
+- https://media.prettysites.io/products/loop-dept/v1/assets/bike.webp
+  Save as: assets/bike.webp
+- https://media.prettysites.io/products/loop-dept/v1/assets/car.webp
+  Save as: assets/car.webp
+- https://media.prettysites.io/products/loop-dept/v1/assets/crane.gif
+  Save as: assets/crane.gif
+- https://media.prettysites.io/products/loop-dept/v1/assets/crane.webp
+  Save as: assets/crane.webp
+- https://media.prettysites.io/products/loop-dept/v1/assets/fabric.webp
+  Save as: assets/fabric.webp
+- https://media.prettysites.io/products/loop-dept/v1/assets/hound.gif
+  Save as: assets/hound.gif
+- https://media.prettysites.io/products/loop-dept/v1/assets/hound.webp
+  Save as: assets/hound.webp
+- https://media.prettysites.io/products/loop-dept/v1/assets/inter.woff2
+  Save as: assets/inter.woff2
+- https://media.prettysites.io/products/loop-dept/v1/assets/oswald.woff2
+  Save as: assets/oswald.woff2
+- https://media.prettysites.io/products/loop-dept/v1/assets/tasa.woff2
+  Save as: assets/tasa.woff2
+- https://media.prettysites.io/products/loop-dept/v1/assets/vinyl.gif
+  Save as: assets/vinyl.gif
+- https://media.prettysites.io/products/loop-dept/v1/assets/vinyl.webp
+  Save as: assets/vinyl.webp
+- https://media.prettysites.io/products/loop-dept/v1/assets/wine.webp
+  Save as: assets/wine.webp
+- https://media.prettysites.io/products/loop-dept/v1/licenses/Inter.txt
+  Save as: licenses/Inter.txt
+- https://media.prettysites.io/products/loop-dept/v1/licenses/Oswald.txt
+  Save as: licenses/Oswald.txt
+- https://media.prettysites.io/products/loop-dept/v1/licenses/Tasa.txt
+  Save as: licenses/Tasa.txt
+- https://media.prettysites.io/products/loop-dept/v1/free-prompt.txt
+  Save as: free-prompt.txt
+
+## Build on a new computer
+
+Use Node.js 22.12 or newer. After writing ALL the files below, run:
+
+```sh
+npm install
+npm run assets
+npm run build
+npm run dev
+```
+
+The asset script downloads and verifies the exact media with SHA-256 before saving it into this new project. Keep these filenames: the source uses them. If a URL fails, report that URL; do not invent substitute media. Oswald, TASA Orbiter and Inter are bundled as verified font assets with licenses. No backend or payment service is supplied: preserve the reference's existing demo interactions.
+
+## Check the result
+
+Compare with the screen recording at its original aspect ratio, then at 390×844, 768×1024 and 1440×900. Check complete scene/section order, fonts, media loading, forward/reverse interactions, reduced motion, autoplay fallback, resize and horizontal overflow. Do not add new sections, statistics, decorative labels or other UI absent from the source.
+
+## Complete source files
+
+### index.html
+
+```html
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><meta name="description" content="Loop Dept, a creative studio in motion. Move through the page to leave a trail of film stills and animated GIFs."><title>Loop Dept — Studio in motion</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fffa8d'/%3E%3Cpath d='M15 9h12v37h23v10H15z'/%3E%3C/svg%3E"><link rel="preload" as="font" type="font/woff2" href="assets/oswald.woff2" crossorigin><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap nav"><a class="brand" href="#home" aria-label="Loop Dept home">Loop Dept</a><button class="menu" aria-expanded="false" aria-controls="links">Menu</button><nav id="links" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div></header>
+<main id="main"><section class="hero" id="home" aria-labelledby="word"><div class="wrap hero-inner">
+<div class="top"><h1 id="word">Loop Dept</h1><div class="rails"><div>Digital Media<br>Branding<br>Art Direction<br>Web Development</div><div>Locations<br>Los angeles<br>London<br>Milano</div><div class="social"><a href="https://www.instagram.com/">Instagram ↗</a><a href="https://x.com/prettysites">Twitter ↗</a><a href="https://www.linkedin.com/">LinkedIn ↗</a></div></div></div>
+<div class="stage" aria-hidden="true"><div class="intro-card"><img src="assets/crane.webp" alt=""><span>01 / Paper Flight</span></div></div><div class="trail" aria-hidden="true"></div>
+<div class="experiment"><button id="play" type="button" aria-label="Play a GIF trail"><i aria-hidden="true"></i><span>Play the trail</span></button><span class="hint">or move your cursor</span></div>
+<div class="hero-foot"><h2>Creative studio crafting narrative-driven digital experiences for modern brands</h2><div><p>We shape stories through film, design and code. One frame at a time.</p><div class="actions"><a class="pill" href="#contact">Book a Meeting <span>↗</span></a><a class="pill alt" href="#about">Learn More <span>●</span></a></div></div></div>
+</div></section>
+<section id="about" class="wrap section"><div class="kicker">01 / About the studio</div><h2 class="display">Production studio shaping story-driven digital experiences for leading brands</h2><div class="partners"><strong>Meet our partners</strong><span>Image makers</span><span>Directors</span><span>Developers</span></div></section>
+<section id="projects" class="works"><div class="wrap section"><div class="kicker">02 / Projects</div><h2 class="display">Digital experiences<br>Selected works</h2><div class="workgrid">
+<article><img src="assets/wine.webp" alt="A crystal coupe and red grapes against a cherry backdrop" loading="lazy"><div><h3>Wine Dine</h3><span>( Trailer )</span></div><details><summary>Discover More</summary><p>A still-life study in burgundy: glass, fruit and a hard shadow share the frame.</p></details></article>
+<article><img src="assets/car.webp" alt="A lone sports car at a petrol station after dusk" loading="lazy"><div><h3>Lonely Car</h3><span>( Animation )</span></div><details><summary>Discover More</summary><p>A roadside story told in the minute between the last daylight and the first electric light.</p></details></article>
+<article><img src="assets/bike.webp" alt="A cyclist in a chrome visor cuts through a blue field" loading="lazy"><div><h3>Futuristic</h3><span>( Movie )</span></div><details><summary>Discover More</summary><p>A rider stays sharp while a world of cobalt rushes past the lens.</p></details></article>
+<article><img src="assets/fabric.webp" alt="Sculptural saffron and red fabric on a dark stage" loading="lazy"><div><h3>Drama Fabric</h3><span>( Trailer )</span></div><details><summary>Discover More</summary><p>A piece of silk takes the lead. Light and folds do the rest.</p></details></article></div></div></section>
+<section id="services" class="dark"><div class="wrap section"><div class="kicker">03 / Services we can help with</div><h2 class="display">Why work with us</h2><div class="service-list">
+<details open><summary>Digital Media</summary><p>Film stills, short loops and moving images for screens of every size.</p></details><details><summary>Branding</summary><p>Identities with a point of view, from a wordmark to a visual system.</p></details><details><summary>Art Direction</summary><p>Concept, casting and a visual language for the whole shoot.</p></details><details><summary>Webflow</summary><p>Responsive studio portfolios and campaign pages built around the work.</p></details></div></div></section>
+<section class="wrap section"><div class="kicker">04 / Who’s talking about us</div><blockquote>“Keep the running dog.”<cite>Head of Vibes · BananaWave Inc. <small>Fictional studio note</small></cite></blockquote></section></main>
+<footer id="contact"><div class="wrap section"><div class="kicker">05 / Contact</div><h2 class="display">What are we making?</h2><p>Start with the project, the audience and the date you have in mind.</p><button id="brief" class="pill">Start a project brief <span>↗</span></button><div class="end"><b class="brand">Loop Dept</b><a href="free-prompt.txt" download>Get the free build prompt ↓</a><a href="#home">Back to top ↑</a></div></div></footer>
+<dialog id="briefbox"><form method="dialog"><button class="close" aria-label="Close brief">×</button></form><h2>Project brief</h2><p>Save a copy to share with your studio.</p><label for="notes">What are you making?</label><textarea id="notes" rows="6" placeholder="Project, audience, timeline…"></textarea><button class="pill" id="save">Download brief ↓</button></dialog>
+</body></html>
+```
+
+### style.css
+
+```css
+@font-face{font-family:Oswald;src:url(assets/oswald.woff2) format("woff2");font-weight:200 700;font-display:swap}@font-face{font-family:Tasa;src:url(assets/tasa.woff2) format("woff2");font-weight:400 800;font-display:swap}@font-face{font-family:Inter;src:url(assets/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--ink:#141414;--yellow:#fffa8d;--line:#ccc;--gut:clamp(20px,4.5vw,72px);font:16px/1.45 Inter,Arial,sans-serif;color:var(--ink);background:white;scroll-behavior:smooth;scroll-padding-top:72px}*{box-sizing:border-box}body,h1,h2,h3,p,blockquote{margin:0}a{color:inherit;text-decoration:none}button,textarea{font:inherit}button,summary{cursor:pointer}button{color:inherit}a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #3461ff;outline-offset:4px}.wrap{width:min(1200px,calc(100% - var(--gut)*2));margin:auto}.skip{position:fixed;top:-80px;left:12px;z-index:20;padding:12px;background:var(--yellow)}.skip:focus{top:12px}header{position:fixed;inset:0 0 auto;background:#fff;z-index:10;border-bottom:1px solid #dededd}.nav{height:59px;display:flex;align-items:center;justify-content:space-between}.brand{font:650 34px/.95 Oswald,Impact,sans-serif;letter-spacing:-2.7px;text-transform:uppercase}.nav nav,.actions{display:flex;align-items:center;gap:26px}.nav a:not(.brand){font:650 15px Tasa,Arial,sans-serif}.nav nav a:hover,.social a:hover,.end a:hover{text-decoration:underline;text-underline-offset:4px}.menu{display:none;border:0;background:transparent}.hero{position:relative;overflow:hidden;isolation:isolate}.hero-inner{min-height:max(730px,100svh);padding-top:clamp(89px,10.2vh,132px);padding-bottom:clamp(32px,5vh,58px);display:flex;flex-direction:column;justify-content:space-between;position:relative}.top,.hero-foot{position:relative;z-index:1}h1{font:600 clamp(108px,min(23.4vw,34vh),320px)/.93 Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:-.06em;margin:0 0 .12em -.034em;color:#090909}.rails{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(30px,8vw,120px);font:680 14px/1.48 Tasa,Arial,sans-serif;text-transform:uppercase}.social{display:grid;align-content:start;text-align:right}.hero-foot{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:70px}.hero-foot h2{max-width:22ch;font:600 clamp(26px,2.28vw,34px)/1.08 Tasa,Arial,sans-serif;letter-spacing:-.045em}.hero-foot p{max-width:40ch;font-size:clamp(16px,1.28vw,19px);line-height:1.37}.actions{gap:10px;flex-wrap:wrap;margin-top:21px}.pill{display:inline-flex;align-items:center;gap:20px;border:1px solid #141414;background:#141414;color:#fff;border-radius:100px;font:650 15px/1 Tasa,Arial,sans-serif;padding:13px 18px;min-height:44px}.pill span{font-size:15px}.pill.alt{background:white;color:var(--ink)}.alt span{font-size:8px}.pill:hover{background:var(--yellow);color:var(--ink)}.stage,.trail{position:absolute;inset:0;pointer-events:none}.stage{z-index:2}.trail{z-index:3}.intro-card{position:absolute;top:49%;left:62%;width:clamp(150px,16vw,238px);transform:translate(-50%,-50%) rotate(6deg);transition:opacity .2s;animation:arrive .75s cubic-bezier(.19,1,.22,1) both}.intro-card img,.stamp img{display:block;width:100%;height:100%;object-fit:cover}.intro-card img,.stamp{box-shadow:0 3px 12px #0002}.intro-card span{display:block;text-align:right;color:#181818;font:650 12px/1.6 Tasa,sans-serif;text-transform:uppercase}.active-trail .intro-card{opacity:0}.stamp{position:absolute;width:clamp(128px,16vw,238px);aspect-ratio:384 / 336;left:0;top:0;overflow:hidden;transform-origin:center;will-change:transform,opacity}.experiment{position:relative;z-index:4;display:flex;align-items:center;gap:9px;margin-block:clamp(20px,5vh,65px);align-self:flex-start;font:600 14px Tasa,sans-serif}.experiment button{border:0;display:inline-flex;align-items:center;gap:8px;background:#fffa8d;border-radius:99px;padding:10px 14px;font:inherit}.experiment i{width:0;height:0;border-block:4px solid transparent;border-left:6px solid currentColor}.hint{color:#616161}.section{padding-block:clamp(55px,7vw,102px);border-top:1px solid var(--line)}.kicker{font:650 14px Tasa,sans-serif;text-transform:uppercase;letter-spacing:.035em;margin-bottom:30px}.display,blockquote{font:610 clamp(40px,5.6vw,78px)/.99 Tasa,Arial,sans-serif;letter-spacing:-.055em;max-width:20ch;text-wrap:balance}.partners,.end{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:58px;border-top:1px solid var(--line);padding-top:24px}.partners span{font:650 clamp(17px,2vw,26px) Tasa,sans-serif}.works{background:#f2f2ef}.works .section,.dark .section,footer .section{border:0}.workgrid{display:grid;grid-template-columns:1fr 1fr;gap:54px 24px;margin-top:40px}article>img{width:100%;aspect-ratio:1.5;object-fit:cover;display:block}article>div{display:flex;align-items:baseline;justify-content:space-between;gap:9px;margin:12px 0 8px}h3{font:650 clamp(24px,2.8vw,40px) Tasa,sans-serif;letter-spacing:-.06em}article div span{font-size:14px}summary{width:fit-content;font-weight:600}details p{max-width:52ch;margin:10px 0}.dark{background:var(--ink);color:white}.service-list{margin-top:42px}.service-list details{border-top:1px solid #666;padding:18px 0}.service-list summary{width:100%;font:550 clamp(25px,4vw,50px)/1.2 Tasa,Arial,sans-serif;letter-spacing:-.045em}.service-list details[open] summary{color:var(--yellow)}.service-list p{color:#ddd}blockquote cite{display:block;margin-top:28px;font:600 16px Inter,sans-serif;letter-spacing:0}cite small{display:block;margin-top:5px;color:#626262;font-weight:400}footer{background:var(--yellow)}footer p{margin:20px 0}.end{border-color:#b5af65}.end a,dialog label{font-weight:600}dialog{border:1px solid var(--ink);padding:32px;width:min(470px,90vw)}dialog::backdrop{background:#14141470}dialog h2{font:650 34px Tasa,sans-serif}dialog p{margin:8px 0 20px}textarea{display:block;width:100%;resize:vertical;margin:6px 0 18px;padding:10px}.close{float:right;font-size:27px;border:0;background:white}.nav nav[hidden]{display:none}
+@keyframes arrive{from{opacity:0;transform:translate(-50%,-43%) rotate(-2deg) scale(.86)}to{opacity:1;transform:translate(-50%,-50%) rotate(6deg)}}
+@media(max-width:991px){.nav .menu{display:block;font-weight:650;padding:10px}.nav nav{display:none;position:absolute;inset:59px 0 auto;padding:18px var(--gut);background:white;border-bottom:1px solid var(--line);align-items:flex-start}.nav nav.open{display:flex}.hero-inner{min-height:max(690px,100svh)}}
+@media(max-width:767px){.hero-inner{min-height:max(760px,100svh);padding-top:86px;padding-bottom:30px}.rails{font-size:12px;gap:16px}.hero-foot{grid-template-columns:1fr;gap:14px}.hero-foot h2{max-width:22ch;font-size:30px}.intro-card{left:65%;top:48%;width:140px}.stamp{width:135px}.experiment{margin-top:90px;margin-bottom:28px}.hero-foot p{max-width:43ch}.actions{margin-top:14px}.workgrid{grid-template-columns:1fr}.partners{justify-content:start}.partners strong{width:100%}.nav nav.open{flex-wrap:wrap;gap:18px}.end{align-items:flex-start}.end .brand{width:100%}.hint{display:none}h1{font-size:clamp(95px,23vw,170px)}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.intro-card{animation:none}.stamp{will-change:auto}.stage *{transition:none}}
+```
+
+### script.js
+
+```js
+const $=s=>document.querySelector(s), hero=$('.hero-inner'), layer=$('.trail'), replay=$('#play');
+const photos=['car','wine','bike','fabric'], loops=['crane','hound','vinyl'], tilts=[-8,5,10,-4,7,-6], reduced=matchMedia('(prefers-reduced-motion:reduce)');
+let seq=0,last=null,at=-Infinity,auto=[],rest,preloaded=[];
+function warm(){if(preloaded.length||reduced.matches)return;preloaded=[...photos.map(n=>n+'.webp'),...loops.map(n=>n+'.gif')].map(file=>{const i=new Image();i.src='assets/'+file;return i})}
+function stamp(x,y){
+  const n=seq++, isLoop=n%2===1, pool=isLoop?loops:photos, name=pool[Math.floor(n/2)%pool.length];
+  const el=document.createElement('div'), img=new Image(),angle=tilts[n%tilts.length];el.className='stamp';el.setAttribute('aria-hidden','true');img.alt='';img.src='assets/'+name+(isLoop&&!reduced.matches?'.gif':'.webp');el.append(img);
+  while(layer.childElementCount>=7)layer.firstElementChild.remove();layer.append(el);let base='translate('+Math.round(x-el.offsetWidth/2)+'px,'+Math.round(y-el.offsetHeight/2)+'px) rotate('+angle+'deg)';el.style.transform=base;
+  hero.classList.add('active-trail');clearTimeout(rest);const life=reduced.matches?850:1330;
+  if(!reduced.matches){el.animate([{transform:base+' scale(.79)',opacity:.2},{transform:base+' scale(1)',opacity:1,offset:.16},{transform:base+' scale(1)',opacity:1,offset:.73},{transform:base+' translateY(12px) scale(.95)',opacity:0}],{duration:life,easing:'linear',fill:'forwards'})}
+  setTimeout(()=>el.remove(),life);rest=setTimeout(()=>hero.classList.remove('active-trail'),life+120)
+}
+function stopAuto(){for(const t of auto)clearTimeout(t);auto=[]}
+function point(e,force=false){if(e.target.closest('a,button,nav')||(!force&&reduced.matches))return;const r=hero.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,t=performance.now();
+  if(!force&&(t-at<62||(last&&Math.hypot(x-last[0],y-last[1])<Math.max(54,Math.min(96,r.width*.072)))))return;
+  stopAuto();warm();last=[x,y];at=t;stamp(x,y)
+}
+hero.addEventListener('pointerenter',warm,{once:true});hero.addEventListener('pointermove',e=>{if(e.pointerType!=='touch')point(e)});hero.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')point(e,true)});hero.addEventListener('pointerleave',()=>{last=null});
+function play(){stopAuto();warm();const r=hero.getBoundingClientRect(),poses=reduced.matches?[[.53,.49]]:[[.3,.5],[.42,.43],[.55,.4],[.66,.45],[.73,.53],[.63,.58],[.51,.55],[.42,.49]];poses.forEach(([x,y],i)=>auto.push(setTimeout(()=>stamp(x*r.width,y*r.height),i*165)))}
+replay.addEventListener('click',play);
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAuto();layer.replaceChildren();hero.classList.remove('active-trail')}});
+const menu=$('.menu'), links=$('#links');function closeMenu(){links.classList.remove('open');menu.setAttribute('aria-expanded','false')}
+menu.onclick=()=>{menu.setAttribute('aria-expanded',String(links.classList.toggle('open')))};links.addEventListener('click',closeMenu);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&links.classList.contains('open')){closeMenu();menu.focus()}});
+$('#brief').onclick=()=>$('#briefbox').showModal();$('#save').onclick=()=>{const field=$('#notes');if(!field.value.trim()){field.focus();return}const url=URL.createObjectURL(new Blob(['Loop Dept project brief\n\n'+field.value+'\n'],{type:'text/plain'})),a=document.createElement('a');a.href=url;a.download='project-brief.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+```
+
+### package.json
+
+```json
+{
+  "name": "loop-dept",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node build.mjs",
+    "dev": "node server.mjs",
+    "assets": "node download-assets.mjs"
+  }
+}
+```
+
+### package-lock.json
+
+```json
+{
+  "name": "loop-dept",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "loop-dept",
+      "version": "1.0.0"
+    }
+  }
+}
+```
+
+### server.mjs
+
+```js
+import http from 'node:http';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const base=fileURLToPath(new URL('./',import.meta.url));const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.txt':'text/plain; charset=utf-8','.gif':'image/gif','.webp':'image/webp','.woff2':'font/woff2'};
+http.createServer((req,res)=>{let name;try{name=decodeURIComponent(new URL(req.url,'http://localhost').pathname).slice(1)||'index.html'}catch{res.writeHead(400).end();return}if(!['index.html','style.css','script.js','free-prompt.txt'].includes(name)&&!/^((assets|licenses)\/[a-zA-Z0-9._-]+)$/.test(name)){res.writeHead(404).end();return}const f=path.join(base,name);fs.stat(f,(e,s)=>{if(e||!s.isFile()){res.writeHead(404).end();return}res.writeHead(200,{'Content-Type':mime[path.extname(f)]||'application/octet-stream','Content-Length':s.size});if(req.method==='HEAD')res.end();else fs.createReadStream(f).pipe(res)})}).listen(Number(process.env.PORT||5296),'127.0.0.1',()=>console.log('Loop Dept: http://127.0.0.1:'+(process.env.PORT||5296)+'/'));
+```
+
+### build.mjs
+
+```js
+import {cp,mkdir} from 'node:fs/promises';
+const root=new URL('./',import.meta.url);await mkdir(new URL('dist/',root),{recursive:true});
+for(const f of ['index.html','style.css','script.js','assets','licenses','free-prompt.txt'])await cp(new URL(f,root),new URL('dist/'+f,root),{recursive:true});
+```
+
+### assets.json
+
+```json
+[
+  {
+    "file": "assets/bike.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/bike.webp",
+    "bytes": 79044,
+    "sha256": "b4c58e3ed8dac277ac3402deecc8f4a3df4ef93ab1046d2706c27c7aa95cdd6f"
+  },
+  {
+    "file": "assets/car.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/car.webp",
+    "bytes": 77068,
+    "sha256": "586b099c3d65d3b9b6cffc16c9b644b419003a2398672e592be160381a983461"
+  },
+  {
+    "file": "assets/crane.gif",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/crane.gif",
+    "bytes": 320756,
+    "sha256": "18487e70df19c4448edd24992599cdee1a4838d5f1a6a59087467392f6086500"
+  },
+  {
+    "file": "assets/crane.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/crane.webp",
+    "bytes": 13944,
+    "sha256": "b3eed8a60faf1f0b00ceec3ed6ebc261647145cf0f18a2b1af1b1eddf2a1f318"
+  },
+  {
+    "file": "assets/fabric.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/fabric.webp",
+    "bytes": 79252,
+    "sha256": "9a525e1d8a1af4f6a216f79db7d2d99f2e8c18208436dbad85f244e6cbdcd2bb"
+  },
+  {
+    "file": "assets/hound.gif",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/hound.gif",
+    "bytes": 330171,
+    "sha256": "6c2f6f8a18171d3f074196df0182bd5f3a4fe7b993bd151b39ba645aef97f5f2"
+  },
+  {
+    "file": "assets/hound.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/hound.webp",
+    "bytes": 17484,
+    "sha256": "7dc7806bd40945fdea8acbe8d01e26a54ede1bfbc9f8f52c90d3983971c1e2a5"
+  },
+  {
+    "file": "assets/inter.woff2",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/inter.woff2",
+    "bytes": 48256,
+    "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+  },
+  {
+    "file": "assets/oswald.woff2",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/oswald.woff2",
+    "bytes": 28488,
+    "sha256": "bd73278ee0c50041b91b4c03d1229e35b501637f46b6409e7da2d3a758446ea5"
+  },
+  {
+    "file": "assets/tasa.woff2",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/tasa.woff2",
+    "bytes": 31324,
+    "sha256": "f1f146c134f6b3f174dcec1fd2b6212af6b61fb5172a1f5b41ab435386b547db"
+  },
+  {
+    "file": "assets/vinyl.gif",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/vinyl.gif",
+    "bytes": 336779,
+    "sha256": "ebc3bb90f2bd557a8644dc2c925e13a50d219d714b496396b8425c3d1f09b664"
+  },
+  {
+    "file": "assets/vinyl.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/vinyl.webp",
+    "bytes": 19680,
+    "sha256": "2510c130228b7a709721ddf8afe87b57189de5cf2cc1c4634d54698e6032dec8"
+  },
+  {
+    "file": "assets/wine.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/wine.webp",
+    "bytes": 64090,
+    "sha256": "7e4cdee4163a23ca8f542de006d9cd7ab97861aaea3da49f84a359cad4fb82d7"
+  },
+  {
+    "file": "licenses/Inter.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/licenses/Inter.txt",
+    "bytes": 4477,
+    "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+  },
+  {
+    "file": "licenses/Oswald.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/licenses/Oswald.txt",
+    "bytes": 4388,
+    "sha256": "23916cdee678823c3c517c699cb2e043088de0d46c959eeaa168b54bb84534df"
+  },
+  {
+    "file": "licenses/Tasa.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/licenses/Tasa.txt",
+    "bytes": 4427,
+    "sha256": "df87441a1dc9a42f59e8fdeb6e34a3cfa0be80d956c2955273652cabaeb6b5bc"
+  },
+  {
+    "file": "free-prompt.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/free-prompt.txt",
+    "bytes": 22646,
+    "sha256": "08d43f5c8e2fcbc948ee7fa7d83d5e172df92c341e3b956724d26bd01504b790"
+  }
+]
+```
+
+### download-assets.mjs
+
+```js
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+const root=import.meta.dirname;
+const assets=JSON.parse(await fs.readFile(new URL('./assets.json',import.meta.url),'utf8'));
+for(const asset of assets){
+ const target=path.resolve(root,asset.file);
+ if(asset.file!=='free-prompt.txt'&&!['assets','licenses'].some(folder=>target.startsWith(path.join(root,folder)+path.sep)))throw Error('Unsafe asset path');
+ const valid=bytes=>bytes&&bytes.length===asset.bytes&&createHash('sha256').update(bytes).digest('hex')===asset.sha256;
+ if(valid(await fs.readFile(target).catch(()=>null)))continue;
+ if(new URL(asset.url).origin!=='https://media.prettysites.io')throw Error('Unexpected media origin');
+ const response=await fetch(asset.url,{signal:AbortSignal.timeout(90000)});
+ if(!response.ok)throw Error(asset.url+' HTTP '+response.status);
+ const data=Buffer.from(await response.arrayBuffer());
+ if(!valid(data))throw Error('Asset verification failed: '+asset.url);
+ await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,data);
+ console.log('Ready: '+asset.file);
+}
+console.log('All '+assets.length+' assets verified');
+```
+
+
+## Apply the user’s changes before finishing
+If the user supplied new content or media, the final website must show those replacements, not the original sample content. Preserve untouched design behavior. Summarize the changes and any missing assets or untested behavior.

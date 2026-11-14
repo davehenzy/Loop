@@ -1,0 +1,6 @@
+{
+  "name": "Loop Dept",
+  "description": "Loop Dept, a creative studio in motion. Move through the page to leave a trail of film stills and animated GIFs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
